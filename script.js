@@ -1,11 +1,10 @@
 const search = () => {
-    string = document.getElementById('Search').value.toUpperCase()
-    text = document.textContent
-    console.log(string)
-    console.log( text)
-    for (let i = 0; i < string.length; i++) {
-        if (string[i] == text[i]) {
-            console.log('sla')
+    const string = document.getElementById('Search').value.toLowerCase();
+    const titulos = document.querySelectorAll('#Titulo');
+    for (let i = 0; i < titulos.length; i++) {
+        const titulo = titulos[i].textContent.toLowerCase();
+        if (titulo.includes(string)) {
+            console.log(`O título "${titulo}" contém a string "${string}"`);
         }
     }
-}
+};
